@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Menu, X, ExternalLink } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -39,16 +39,7 @@ function App() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-emerald-500 rounded-full flex items-center justify-center text-white font-bold">
-                SV
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent">
-                DIY Sous Vide
-              </span>
-            </div>
-
+          <div className="flex justify-end items-center h-16">
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
               {['start', 'components', 'assembly', 'contact'].map((section) => (
@@ -178,74 +169,19 @@ function App() {
             <h3 className="text-2xl font-bold text-slate-900 mb-4">What you will need</h3>
             <ul className="space-y-3 text-slate-700">
               <li>
-                🔥 <strong>Water Boiler</strong> (1200W heating element) —{' '}
-                <small>
-                  <a
-                    href="https://www.kogan.com/au/buy/korjo-water-boiler-korjo/?utm_source=google&utm_medium=product_listing_ads&gclid=CLyq8fj_5c8CFYOUvAodUDoCbg"
-                    title="Water Boiler"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-emerald-600 transition-colors inline-flex items-center gap-1"
-                  >
-                    link <ExternalLink size={12} />
-                  </a>
-                </small>
+                🔥 <strong>Water Boiler</strong> (1200W heating element)
               </li>
               <li>
-                💧 <strong>Water Pump</strong> (low voltage, submersible) —{' '}
-                <small>
-                  <a
-                    href="https://www.bunnings.com.au/aquapro-low-voltage-tabletop-feature-pump_p2810161"
-                    title="Water Pump"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-emerald-600 transition-colors inline-flex items-center gap-1"
-                  >
-                    link <ExternalLink size={12} />
-                  </a>
-                </small>
+                💧 <strong>Water Pump</strong> (low voltage, submersible)
               </li>
               <li>
-                🌡️ <strong>Temperature Controller</strong> (Inkbird ITC-1000 or similar) —{' '}
-                <small>
-                  <a
-                    href="http://www.ebay.com.au/itm/like/371556001925?lpid=107&chn=ps"
-                    title="Temperature Controller"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-emerald-600 transition-colors inline-flex items-center gap-1"
-                  >
-                    link <ExternalLink size={12} />
-                  </a>
-                </small>
+                🌡️ <strong>Temperature Controller</strong> (Inkbird ITC-1000 or similar)
               </li>
               <li>
-                🔧 <strong>Sealant</strong> (Temperature and water resistant) —{' '}
-                <small>
-                  <a
-                    href="http://www.ebay.com.au/itm/like/222241774417?lpid=107&chn=ps"
-                    title="Sealant"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-emerald-600 transition-colors inline-flex items-center gap-1"
-                  >
-                    link <ExternalLink size={12} />
-                  </a>
-                </small>
+                🔧 <strong>Sealant</strong> (Temperature and water resistant)
               </li>
               <li>
-                📦 <strong>Container</strong> (Esky / Food-grade, 26L+) —{' '}
-                <small>
-                  <a
-                    href="https://www.bunnings.com.au/esky-26l-coolmate-esky_p3240574"
-                    title="Esky"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-emerald-600 transition-colors inline-flex items-center gap-1"
-                  >
-                    link <ExternalLink size={12} />
-                  </a>
-                </small>
+                📦 <strong>Container</strong> (Esky / Food-grade, 26L+)
               </li>
               <li>
                 🛠️ <strong>General Tools:</strong> drill, electrical tape, screws, cable ties, power cable with plug
