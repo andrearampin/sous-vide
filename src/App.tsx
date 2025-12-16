@@ -1,9 +1,20 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && lightboxImage) {
+        setLightboxImage(null)
+      }
+    }
+
+    window.addEventListener('keydown', handleEscape)
+    return () => window.removeEventListener('keydown', handleEscape)
+  }, [lightboxImage])
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
