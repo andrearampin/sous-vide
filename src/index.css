@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4acaa8;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  }
+}
